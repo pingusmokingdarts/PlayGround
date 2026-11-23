@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/><title>Wasteland Road</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div id="game">
+  <canvas id="canvas"></canvas>
+  <header id="topbar">
+    <div class="brand"><span>WASTELAND</span><b>ROAD</b></div>
+    <div class="vitals">
+      <div class="meter"><i>HP</i><div><span id="hpbar"></span></div><b id="hptext">100</b></div>
+      <div class="meter fuel"><i>FUEL</i><div><span id="fuelbar"></span></div><b id="fueltext">100</b></div>
+    </div>
+    <button id="sound" aria-label="Toggle sound">SOUND ON</button>
+  </header>
+  <aside id="quest">
+    <small>CURRENT RUN</small>
+    <h2 id="questTitle">Raid the Iron Camp</h2>
+    <p id="questText">Defeat raiders <b id="killCount">0/6</b></p>
+  </aside>
+  <aside id="status">
+    <div><span>SCRAP</span><b id="scrap">0</b></div>
+    <div><span>WATER</span><b id="water">3</b></div>
+    <div><span>AMMO</span><b id="ammo">24</b></div>
+  </aside>
+  <div id="toast"></div>
+  <div id="crosshair"></div>
+  <div id="actions">
+    <button id="driveBtn" class="action"><kbd>E</kbd><span>DRIVE</span></button>
+    <button id="shootBtn" class="action"><kbd>J</kbd><span>FIRE</span></button>
+  </div>
+  <div id="joystick"><div id="stick"></div></div>
+  <div id="shop" class="panel hidden">
+    <button class="close">×</button><small>OUTLAW WORKSHOP</small><h1>IRON GEAR</h1>
+    <div class="shopgrid">
+      <button class="buy" data-item="armor"><b>PLATED ARMOR</b><span>+25 max health</span><em>15 scrap</em></button>
+      <button class="buy" data-item="fuel"><b>FUEL CANISTER</b><span>Refill 40 fuel</span><em>8 scrap</em></button>
+      <button class="buy" data-item="ammo"><b>BANDOLIER</b><span>+30 rounds</span><em>10 scrap</em></button>
+      <button class="buy" data-item="damage"><b>BRUTE BARREL</b><span>+8 weapon damage</span><em>20 scrap</em></button>
+    </div>
+  </div>
+  <div id="start">
+    <div class="backdrop"></div>
+    <div class="startcard">
+      <small>THE LAST TERRITORY</small>
+      <h1>WASTELAND<br/><em>ROAD</em></h1>
+      <p>Survive the dunes. Salvage the wrecks.<br/>Build a machine that can outrun the end.</p>
+      <button id="startBtn" aria-label="Start game">START THE ENGINE <span>→</span></button>
+      <div class="controls"><b>WASD</b> MOVE &nbsp; <b>MOUSE</b> AIM &nbsp; <b>CLICK</b> FIRE &nbsp; <b>E</b> VEHICLE</div>
+    </div>
+  </div>
+  <div id="pause" class="hidden"><h1>ENGINE OFF</h1><p>Press ESC to return</p></div>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
